@@ -1,110 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
-body {
-    font-family: Oswald, Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #151515;
-    color: #fff;
-    overflow-x: hidden;
-
-
-}
-
-#landing-page {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-
-#webgl-canvas {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-#landing-header {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translate(-20%, -50%);
-    /*text-align: center;*/
-    z-index: 1;
-}
-
-#landing-header h1 {
-    font-size: 6rem;
-    font-weight: 700;
-    color: #fff;
-    margin: -55px 0px 0px 0px !important
-}
-
-#content {
-    display: flex;
-    height: 100vh;
-}
-
-#side-nav {
-    width: 200px;
-    background: #D43838;
-    padding: 1rem;
     box-sizing: border-box;
 }
 
-#side-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-#side-nav ul li {
-    margin-bottom: 1rem;
-}
-
-#side-nav ul li a {
-    color: #301818;
-    font-family: Oswald, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 2em;
-    margin-left: 30px;
-    text-decoration: none;
-}
-
-#side-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    flex: 1;
-    padding: 2rem;
-    background: #D43838;
-    overflow-y: auto;
-}
-
-
-main section.active {
-    display: block;
-}
-
-section h2 {
-    color: #fff;
-}
-
-#projects {
+body {
+    margin: 130px 2% 10% 2%;
+    font-family: 'Arial', sans-serif;
     display: flex;
-    height: 100vh;
-    background-color: #748CAB;
+    flex-direction: column;
+    background: #bbc1ffad;
+    overflow: visible;
+    /* height: 100vh; */
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* Ethereal gradient */
+    /* Prevent scrollbars */
+    .nav-menu {
+        overflow: hidden;
+        z-index: 1;
+    }
 }
 
-#subtitle {
-    color: black;
-    font-family: Oswald, Arial, sans-serif;
-    font-weight: 400;
+header {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    color: #3a3a3a;
+}
+
+.contact-me {
+    cursor: pointer;
+    color: #3a3a3a;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.912);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    /* z-index: 1; */
+}
+
+
+.close-menu {
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.nav-menu ul li {
+    margin: 50px 0;
     text-transform: uppercase;
-    font-size: 3em;
-    margin-left: 30px
+    font-family: Oswald, sans-serif;
+
+}
+
+.nav-menu ul li a {
+    color: rgb(0, 255, 140);
+    font-size: 5rem;
+    text-decoration: none;
+    font-family: Oswald, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #f10000;
+}
+
+.landing {
+    text-align: center;
+    /* z-index: 2; */
+    margin-top: 20%;
+    position: relative;
+    /* Position for layering */
+}
+
+.landing h1 {
+    font-size: 48px;
+    color: #3a3a3a;
+}
+
+.landing p {
+    font-size: 24px;
+    color: #555;
+}
+
+.content-box {
+    display: flex;
 }
